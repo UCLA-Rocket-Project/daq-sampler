@@ -1,6 +1,8 @@
-﻿using namespace std;
+﻿#include "spdlog/spdlog.h"
+#include <modbus/modbus-tcp.h>
+using namespace std;
 
 int main() {
-	cout << "Hello CMake." << endl;
+	spdlog::warn("yo");
 	return 0;
 }
