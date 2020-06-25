@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['takesample_16',['takeSample',['../class_a_d_cs.html#ab342906a07d28bee19779dd6d6983be2',1,'ADCs::takeSample()'],['../class_thermocouples.html#a91775affe4939ff9d05683755f62e11a',1,'Thermocouples::takeSample()']]],
-  ['thermocouples_17',['Thermocouples',['../class_thermocouples.html',1,'']]]
+  ['num_5fadcs_8',['NUM_ADCS',['../_shared_memory_8h.html#a409b4937b07d6067c25595899c2b6f22',1,'SharedMemory.h']]],
+  ['num_5ftcs_9',['NUM_TCS',['../_shared_memory_8h.html#a964bf5b2f3231e9fcfd0765b68cc02ab',1,'SharedMemory.h']]]
 ];

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['readme_5',['README',['../md_src__r_e_a_d_m_e.html',1,'']]],
-  ['rawreading_6',['RawReading',['../_devices_8h.html#a51e63452a8d2670066af8421e92c06c4',1,'Devices.h']]],
-  ['readme_2emd_7',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['humanreading_6',['humanReading',['../struct_device_registers.html#aaf8a9b4541cc695015f942189f8c61c4',1,'DeviceRegisters']]]
 ];
