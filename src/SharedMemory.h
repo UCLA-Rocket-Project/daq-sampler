@@ -13,7 +13,7 @@ public:
 	/** The raw reading returned by an associated device */
 	std::atomic<uint32_t> rawReading;
 	/** The human readable version of the reading after calibration is applied */
-	std::atomic<uint16_t> humanReading;
+	std::atomic<int16_t> humanReading;
 	/** The 4-char ID of the device, first char specifies the type of sensor for ADC **/
 	std::atomic<uint32_t> id;
 	/** The scale to apply for calibration in hundredths */
@@ -23,6 +23,7 @@ public:
 };
 // we aint got time for hipster message passing
 class SharedMemory {
+public:
 	/** Controls whether to log data to file or not */
 	std::atomic<bool> logging;
 	/** Array of whether a specific ADC channel is sampled */
