@@ -19,8 +19,6 @@ public:
 	std::atomic<float> scale;
 	/** The offset to apply for callibration (which is signed) */
 	std::atomic<float> offset;
-	/** Extended information on how to deserialize a value into a human readable version */
-	std::atomic<float> extendedInfo;
 };
 // we aint got time for hipster message passing
 class SharedMemory {

@@ -26,7 +26,7 @@ int nextChannel(int lastChannel, std::atomic<bool>* enableMap, int totalChannels
 					auto sampleStart = high_resolution_clock::now();
 					RawReading rawReading = adc->takeSample(chan);
 					auto sampleDur = duration_cast<milliseconds>(high_resolution_clock::now() - sampleStart).count();
-					spdlog::info("ADC Sample Duration: {}", sampleDur);
+					spdlog::info("ADC Sample Duration: {}ms", sampleDur);
 
 					mem.adcRegs[chan].rawReading = rawReading;
 					float reading = adc->convToVolts(rawReading);
