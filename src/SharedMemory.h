@@ -4,7 +4,6 @@
 const int NUM_ADCS = 16;
 const int NUM_TCS = 10;
 
-
 // all fields are atomic since they'll be written 2 threads at once
 // uint32_t are 2-byte wide fields, and uint16_t are 1-byte wide fields
 
