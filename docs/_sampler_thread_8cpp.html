@@ -73,16 +73,55 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_sampler_thread_8h_source.html">SamplerThread.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;spdlog/spdlog.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8a896ec823416a8455c6bc500ec3c8c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sampler_thread_8cpp.html#a8a896ec823416a8455c6bc500ec3c8c5">samplerThread</a> (<a class="el" href="class_shared_memory.html">SharedMemory</a> &amp;mem, std::unique_ptr&lt; ADC &gt; adc, std::unique_ptr&lt; Thermocouple &gt; tc)</td></tr>
-<tr class="separator:a8a896ec823416a8455c6bc500ec3c8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2bb591760f3022cf9c883b01d3a8e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sampler_thread_8cpp.html#a2b2bb591760f3022cf9c883b01d3a8e4">nextChannel</a> (int lastChannel, std::atomic&lt; bool &gt; *enableMap, int totalChannels)</td></tr>
+<tr class="separator:a2b2bb591760f3022cf9c883b01d3a8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3619694cc85eb9649fd6af2c7c6a986"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sampler_thread_8cpp.html#ac3619694cc85eb9649fd6af2c7c6a986">samplerThread</a> (<a class="el" href="class_shared_memory.html">SharedMemory</a> &amp;mem, unique_ptr&lt; <a class="el" href="class_a_d_cs.html">ADCs</a> &gt; adc, unique_ptr&lt; <a class="el" href="class_thermocouples.html">Thermocouples</a> &gt; tc)</td></tr>
+<tr class="separator:ac3619694cc85eb9649fd6af2c7c6a986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24463bdd625cd27655b4957e1b2cc18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sampler_thread_8cpp.html#ac24463bdd625cd27655b4957e1b2cc18">nextChannel</a> (int lastChannel, atomic&lt; bool &gt; *enableMap, int totalChannels)</td></tr>
+<tr class="separator:ac24463bdd625cd27655b4957e1b2cc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8a896ec823416a8455c6bc500ec3c8c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a896ec823416a8455c6bc500ec3c8c5">&#9670;&nbsp;</a></span>samplerThread()</h2>
+<a id="a2b2bb591760f3022cf9c883b01d3a8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2bb591760f3022cf9c883b01d3a8e4">&#9670;&nbsp;</a></span>nextChannel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nextChannel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lastChannel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::atomic&lt; bool &gt; *&#160;</td>
+          <td class="paramname"><em>enableMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>totalChannels</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3619694cc85eb9649fd6af2c7c6a986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3619694cc85eb9649fd6af2c7c6a986">&#9670;&nbsp;</a></span>samplerThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -96,14 +135,48 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; ADC &gt;&#160;</td>
+          <td class="paramtype">unique_ptr&lt; <a class="el" href="class_a_d_cs.html">ADCs</a> &gt;&#160;</td>
           <td class="paramname"><em>adc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; Thermocouple &gt;&#160;</td>
+          <td class="paramtype">unique_ptr&lt; <a class="el" href="class_thermocouples.html">Thermocouples</a> &gt;&#160;</td>
           <td class="paramname"><em>tc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac24463bdd625cd27655b4957e1b2cc18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24463bdd625cd27655b4957e1b2cc18">&#9670;&nbsp;</a></span>nextChannel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nextChannel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lastChannel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">atomic&lt; bool &gt; *&#160;</td>
+          <td class="paramname"><em>enableMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>totalChannels</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

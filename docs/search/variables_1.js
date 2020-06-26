@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['id_43',['id',['../struct_device_registers.html#aef80a60c217db5e87a5b6e4e4df00e60',1,'DeviceRegisters']]]
+  ['extendedinfo_80',['extendedInfo',['../struct_device_registers.html#a4e3258e085adcb479de61dfd3490b47f',1,'DeviceRegisters']]]
 ];

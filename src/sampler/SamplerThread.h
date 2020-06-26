@@ -1,6 +1,7 @@
 #pragma once
-#include <memory>
 #include <Devices.h>
+#include <atomic>
+#include <memory>
 #include "../SharedMemory.h"
 
-void samplerThread(SharedMemory &mem, std::unique_ptr<ADC> adc, std::unique_ptr<Thermocouple> tc);
+[[noreturn]] void samplerThread(SharedMemory &mem, std::unique_ptr<ADCs> adc, std::unique_ptr<Thermocouples> tc);

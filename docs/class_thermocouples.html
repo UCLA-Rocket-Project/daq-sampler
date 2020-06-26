@@ -74,21 +74,30 @@ $(function() {
  <a href="class_thermocouples.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_devices_8h_source.html">Devices.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Thermocouples:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_thermocouples.png" usemap="#Thermocouples_map" alt=""/>
+  <map id="Thermocouples_map" name="Thermocouples_map">
+<area href="class_l_t_c2984.html" alt="LTC2984" shape="rect" coords="0,56,98,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a91775affe4939ff9d05683755f62e11a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thermocouples.html#a91775affe4939ff9d05683755f62e11a">takeSample</a> (unsigned int channel)=0</td></tr>
-<tr class="memdesc:a91775affe4939ff9d05683755f62e11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the raw reading from a thermocouple channel.  <a href="class_thermocouples.html#a91775affe4939ff9d05683755f62e11a">More...</a><br /></td></tr>
-<tr class="separator:a91775affe4939ff9d05683755f62e11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8296cb445807e8bb5eea0c02c56e042"><td class="memItemLeft" align="right" valign="top">virtual int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thermocouples.html#ad8296cb445807e8bb5eea0c02c56e042">convToTenthCelsius</a> (<a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a> rawReading)=0</td></tr>
-<tr class="memdesc:ad8296cb445807e8bb5eea0c02c56e042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a raw reading into tenths of a degree Celsius.  <a href="class_thermocouples.html#ad8296cb445807e8bb5eea0c02c56e042">More...</a><br /></td></tr>
-<tr class="separator:ad8296cb445807e8bb5eea0c02c56e042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada97932aef6bf020a3bf409f461ae61e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thermocouples.html#ada97932aef6bf020a3bf409f461ae61e">takeSample</a> (uint8_t channel, <a class="el" href="_devices_8h.html#aa2fc24b6a8bd5f66aa88e94ecd4b0cbf">TC_TYPE</a> tcType)=0</td></tr>
+<tr class="memdesc:ada97932aef6bf020a3bf409f461ae61e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the raw reading from a thermocouple channel.  <a href="class_thermocouples.html#ada97932aef6bf020a3bf409f461ae61e">More...</a><br /></td></tr>
+<tr class="separator:ada97932aef6bf020a3bf409f461ae61e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20562f98eca898ba72e0cc31da69b685"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thermocouples.html#a20562f98eca898ba72e0cc31da69b685">convToCelsius</a> (<a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a> rawReading)=0</td></tr>
+<tr class="memdesc:a20562f98eca898ba72e0cc31da69b685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a raw reading into tenths of a degree Celsius.  <a href="class_thermocouples.html#a20562f98eca898ba72e0cc31da69b685">More...</a><br /></td></tr>
+<tr class="separator:a20562f98eca898ba72e0cc31da69b685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract representation of a multi-channel thermocouple IC. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a91775affe4939ff9d05683755f62e11a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91775affe4939ff9d05683755f62e11a">&#9670;&nbsp;</a></span>takeSample()</h2>
+<a id="ada97932aef6bf020a3bf409f461ae61e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada97932aef6bf020a3bf409f461ae61e">&#9670;&nbsp;</a></span>takeSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -99,9 +108,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual <a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a> Thermocouples::takeSample </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="_devices_8h.html#aa2fc24b6a8bd5f66aa88e94ecd4b0cbf">TC_TYPE</a>&#160;</td>
+          <td class="paramname"><em>tcType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -122,8 +141,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8296cb445807e8bb5eea0c02c56e042"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8296cb445807e8bb5eea0c02c56e042">&#9670;&nbsp;</a></span>convToTenthCelsius()</h2>
+<a id="a20562f98eca898ba72e0cc31da69b685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20562f98eca898ba72e0cc31da69b685">&#9670;&nbsp;</a></span>convToCelsius()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +151,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int16_t Thermocouples::convToTenthCelsius </td>
+          <td class="memname">virtual float Thermocouples::convToCelsius </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a>&#160;</td>
           <td class="paramname"><em>rawReading</em></td><td>)</td>
@@ -154,6 +173,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the tenths of a Celsius represented by the reading </dd></dl>
+
+<p>Implemented in <a class="el" href="class_l_t_c2984.html#a815d697c535b95a4ce169f31f7592972">LTC2984</a>.</p>
 
 </div>
 </div>

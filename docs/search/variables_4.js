@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rawreading_47',['rawReading',['../struct_device_registers.html#a30674c0867348029b9437b5e0259a0c2',1,'DeviceRegisters']]]
+  ['logging_83',['logging',['../class_shared_memory.html#a0ecf27b8185903f5154bb913cb4e0435',1,'SharedMemory']]]
 ];

@@ -72,20 +72,21 @@ $(function() {
 <div class="title">SamplerThread.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;<a class="el" href="_devices_8h_source.html">Devices.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_devices_8h_source.html">Devices.h</a>&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="_shared_memory_8h_source.html">../SharedMemory.h</a>&quot;</code><br />
 </div>
 <p><a href="_sampler_thread_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8a896ec823416a8455c6bc500ec3c8c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sampler_thread_8h.html#a8a896ec823416a8455c6bc500ec3c8c5">samplerThread</a> (<a class="el" href="class_shared_memory.html">SharedMemory</a> &amp;mem, std::unique_ptr&lt; ADC &gt; adc, std::unique_ptr&lt; Thermocouple &gt; tc)</td></tr>
-<tr class="separator:a8a896ec823416a8455c6bc500ec3c8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5c8b9ce5aa84ada650ac13d7584a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_sampler_thread_8h.html#a3e5c8b9ce5aa84ada650ac13d7584a35">samplerThread</a> (<a class="el" href="class_shared_memory.html">SharedMemory</a> &amp;mem, std::unique_ptr&lt; <a class="el" href="class_a_d_cs.html">ADCs</a> &gt; adc, std::unique_ptr&lt; <a class="el" href="class_thermocouples.html">Thermocouples</a> &gt; tc)</td></tr>
+<tr class="separator:a3e5c8b9ce5aa84ada650ac13d7584a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8a896ec823416a8455c6bc500ec3c8c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a896ec823416a8455c6bc500ec3c8c5">&#9670;&nbsp;</a></span>samplerThread()</h2>
+<a id="a3e5c8b9ce5aa84ada650ac13d7584a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5c8b9ce5aa84ada650ac13d7584a35">&#9670;&nbsp;</a></span>samplerThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -99,13 +100,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; ADC &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_a_d_cs.html">ADCs</a> &gt;&#160;</td>
           <td class="paramname"><em>adc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; Thermocouple &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_thermocouples.html">Thermocouples</a> &gt;&#160;</td>
           <td class="paramname"><em>tc</em>&#160;</td>
         </tr>
         <tr>
