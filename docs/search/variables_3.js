@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['id_82',['id',['../struct_device_registers.html#aef80a60c217db5e87a5b6e4e4df00e60',1,'DeviceRegisters']]]
+  ['logging_84',['logging',['../class_shared_memory.html#a0ecf27b8185903f5154bb913cb4e0435',1,'SharedMemory']]]
 ];

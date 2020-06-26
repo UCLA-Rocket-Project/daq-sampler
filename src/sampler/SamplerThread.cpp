@@ -16,28 +16,27 @@ int nextChannel(int lastChannel, std::atomic<bool>* enableMap, int totalChannels
 	while(true) {
 		auto now = steady_clock::now();
 		if(now - lastAdcSample > microseconds(mem.adcTenthsofMsPerSample * 100)) {
-			try {
-				int chan = nextChannel(lastAdcChannel, mem.adcEnabled, NUM_ADCS);
-				lastAdcChannel = chan;
-				lastAdcSample = now;
-				if(chan > -1) {
-					DeviceRegisters &adcReg = mem.adcRegs[chan];
-
+			int chan = nextChannel(lastAdcChannel, mem.adcEnabled, NUM_ADCS);
+			lastAdcChannel = chan;
+			lastAdcSample = now;
+			if(chan > -1) {
+				DeviceRegisters &adcReg = mem.adcRegs[chan];
+				try {
 					auto sampleStart = high_resolution_clock::now();
 					RawReading rawReading = adc->takeSample(chan);
 					auto sampleDur = duration_cast<milliseconds>(high_resolution_clock::now() - sampleStart).count();
-					spdlog::info("ADC Sample Duration: {}ms", sampleDur);
+					spdlog::info("ADC Sample Duration: {} ms", sampleDur);
 
-					mem.adcRegs[chan].rawReading = rawReading;
 					float reading = adc->convToVolts(rawReading);
+					mem.adcRegs[chan].uncalibReading = reading;
 
-					float humanReadable = reading * adcReg.extendedInfo;
-					float callib = adcReg.scale * humanReadable + adcReg.offset;
-					adcReg.humanReading = callib;
+					float calibrated = adcReg.scale * reading + adcReg.offset;
+					adcReg.humanReading = calibrated;
 				}
-			}
-			catch(const exception &e) {
-				spdlog::error("Error trying to sample ADC: {}", e.what());
+				catch (const exception &e) {
+					spdlog::error("Error trying to sample ADC: {}", e.what());
+					adcReg.uncalibReading = nanf("");
+				}
 			}
 		}
 		if(now - lastTCSample > microseconds(mem.tcTenthsOfMsPerSample * 100)) {

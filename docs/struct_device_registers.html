@@ -74,9 +74,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a30674c0867348029b9437b5e0259a0c2"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_device_registers.html#a30674c0867348029b9437b5e0259a0c2">rawReading</a></td></tr>
-<tr class="memdesc:a30674c0867348029b9437b5e0259a0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw reading returned by an associated device.  <a href="struct_device_registers.html#a30674c0867348029b9437b5e0259a0c2">More...</a><br /></td></tr>
-<tr class="separator:a30674c0867348029b9437b5e0259a0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae162e5966e3f2310a6d324bafe0b75f9"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_device_registers.html#ae162e5966e3f2310a6d324bafe0b75f9">uncalibReading</a></td></tr>
+<tr class="memdesc:ae162e5966e3f2310a6d324bafe0b75f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The uncalibrated reading returned by an associated device.  <a href="struct_device_registers.html#ae162e5966e3f2310a6d324bafe0b75f9">More...</a><br /></td></tr>
+<tr class="separator:ae162e5966e3f2310a6d324bafe0b75f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7fc3c02a32df5cbf1b85fa5d737818b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_device_registers.html#af7fc3c02a32df5cbf1b85fa5d737818b">humanReading</a></td></tr>
 <tr class="memdesc:af7fc3c02a32df5cbf1b85fa5d737818b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The human readable version of the reading after calibration is applied.  <a href="struct_device_registers.html#af7fc3c02a32df5cbf1b85fa5d737818b">More...</a><br /></td></tr>
 <tr class="separator:af7fc3c02a32df5cbf1b85fa5d737818b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -89,24 +89,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7aceb5cfc957eaab32971c9b8ca89098"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_device_registers.html#a7aceb5cfc957eaab32971c9b8ca89098">offset</a></td></tr>
 <tr class="memdesc:a7aceb5cfc957eaab32971c9b8ca89098"><td class="mdescLeft">&#160;</td><td class="mdescRight">The offset to apply for callibration (which is signed)  <a href="struct_device_registers.html#a7aceb5cfc957eaab32971c9b8ca89098">More...</a><br /></td></tr>
 <tr class="separator:a7aceb5cfc957eaab32971c9b8ca89098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e3258e085adcb479de61dfd3490b47f"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_device_registers.html#a4e3258e085adcb479de61dfd3490b47f">extendedInfo</a></td></tr>
-<tr class="memdesc:a4e3258e085adcb479de61dfd3490b47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended information on how to deserialize a value into a human readable version.  <a href="struct_device_registers.html#a4e3258e085adcb479de61dfd3490b47f">More...</a><br /></td></tr>
-<tr class="separator:a4e3258e085adcb479de61dfd3490b47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a30674c0867348029b9437b5e0259a0c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30674c0867348029b9437b5e0259a0c2">&#9670;&nbsp;</a></span>rawReading</h2>
+<a id="ae162e5966e3f2310a6d324bafe0b75f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae162e5966e3f2310a6d324bafe0b75f9">&#9670;&nbsp;</a></span>uncalibReading</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;uint32_t&gt; DeviceRegisters::rawReading</td>
+          <td class="memname">std::atomic&lt;float&gt; DeviceRegisters::uncalibReading</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The raw reading returned by an associated device. </p>
+<p>The uncalibrated reading returned by an associated device. </p>
 
 </div>
 </div>
@@ -171,22 +168,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The offset to apply for callibration (which is signed) </p>
-
-</div>
-</div>
-<a id="a4e3258e085adcb479de61dfd3490b47f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e3258e085adcb479de61dfd3490b47f">&#9670;&nbsp;</a></span>extendedInfo</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::atomic&lt;float&gt; DeviceRegisters::extendedInfo</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Extended information on how to deserialize a value into a human readable version. </p>
 
 </div>
 </div>

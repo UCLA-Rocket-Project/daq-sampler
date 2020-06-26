@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['takesample_76',['takeSample',['../class_a_d_cs.html#a95646c17ba87614a0b3f574b449b4ab4',1,'ADCs::takeSample()'],['../class_thermocouples.html#ada97932aef6bf020a3bf409f461ae61e',1,'Thermocouples::takeSample()'],['../class_l_t_c2448.html#a63cb28b04341a31f8d8ba4efc155a7e0',1,'LTC2448::takeSample()'],['../class_l_t_c2984.html#ab0172064bc34c9bbf19a71681485d139',1,'LTC2984::takeSample()']]]
+  ['samplerthread_76',['samplerThread',['../_sampler_thread_8cpp.html#ac3619694cc85eb9649fd6af2c7c6a986',1,'samplerThread(SharedMemory &amp;mem, unique_ptr&lt; ADCs &gt; adc, unique_ptr&lt; Thermocouples &gt; tc):&#160;SamplerThread.cpp'],['../_sampler_thread_8h.html#a3e5c8b9ce5aa84ada650ac13d7584a35',1,'samplerThread(SharedMemory &amp;mem, std::unique_ptr&lt; ADCs &gt; adc, std::unique_ptr&lt; Thermocouples &gt; tc):&#160;SamplerThread.h']]],
+  ['settctype_77',['setTCType',['../class_l_t_c2984.html#a889f48297f8cbab1eed105be4b73d6ba',1,'LTC2984']]]
 ];
