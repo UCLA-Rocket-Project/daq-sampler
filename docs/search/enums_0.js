@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tc_5ftype_95',['TC_TYPE',['../_devices_8h.html#aa2fc24b6a8bd5f66aa88e94ecd4b0cbf',1,'Devices.h']]]
+  ['osr_94',['OSR',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9',1,'LTC2448']]]
 ];

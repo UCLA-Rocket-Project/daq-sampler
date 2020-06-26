@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['s_102',['S',['../_devices_8h.html#aa2fc24b6a8bd5f66aa88e94ecd4b0cbfaf1ce01387d2348f8b858721a7db81670',1,'Devices.h']]]
+  ['osr1024_102',['OSR1024',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9ab1b557a7aadb2cb157ff61a593ecb3a9',1,'LTC2448']]],
+  ['osr128_103',['OSR128',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9afb054ffeb6ec1b8067bafc4b14fd0eee',1,'LTC2448']]],
+  ['osr2048_104',['OSR2048',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9a9ebaca702d072efa3f5750b81f2cdc37',1,'LTC2448']]],
+  ['osr256_105',['OSR256',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9ad97f747fc3fc95309e8a02c33e4ab19d',1,'LTC2448']]],
+  ['osr4096_106',['OSR4096',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9a3a5008c4c5679a161d5ebe34fb0c4ff2',1,'LTC2448']]],
+  ['osr512_107',['OSR512',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9a2156e37bbb79fac7c8db502011c6d284',1,'LTC2448']]],
+  ['osr64_108',['OSR64',['../namespace_l_t_c2448.html#ac896b22717b376cf9cc42a7625f74cb9ac42a1ccaa72707b75529a893d2d375d2',1,'LTC2448']]]
 ];

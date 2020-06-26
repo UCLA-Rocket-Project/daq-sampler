@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rawreading_94',['RawReading',['../_devices_8h.html#a51e63452a8d2670066af8421e92c06c4',1,'Devices.h']]]
+  ['channeloracle_93',['ChannelOracle',['../namespace_l_t_c2448.html#a7c2a984ec40b75a9fa1260d6ff45a053',1,'LTC2448']]]
 ];

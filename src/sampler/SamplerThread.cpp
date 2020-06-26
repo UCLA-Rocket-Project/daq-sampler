@@ -22,15 +22,17 @@ int nextChannel(int lastChannel, std::atomic<bool>* enableMap, int totalChannels
 			if(chan > -1) {
 				DeviceRegisters &adcReg = mem.adcRegs[chan];
 				try {
+					/* do some benchmarks on the time to sample.
+					 * on oracle hit should be 0
+					 * on oracle miss should be ~2ms
+					 */
 					auto sampleStart = high_resolution_clock::now();
-					RawReading rawReading = adc->takeSample(chan);
+					float volts = adc->takeSample(chan);
 					auto sampleDur = duration_cast<milliseconds>(high_resolution_clock::now() - sampleStart).count();
 					spdlog::info("ADC Sample Duration: {} ms", sampleDur);
 
-					float reading = adc->convToVolts(rawReading);
-					mem.adcRegs[chan].uncalibReading = reading;
-
-					float calibrated = adcReg.scale * reading + adcReg.offset;
+					mem.adcRegs[chan].uncalibReading = volts;
+					float calibrated = adcReg.scale * volts + adcReg.offset;
 					adcReg.humanReading = calibrated;
 				}
 				catch (const exception &e) {
@@ -46,7 +48,7 @@ int nextChannel(int lastChannel, std::atomic<bool>* enableMap, int totalChannels
 	}
 }
 // gets the next enabled channel past "lastChannel"
-// guaranteed bounds: [0, totalChannels)
+// guaranteed bounds: [-1, totalChannels)
 int nextChannel(int lastChannel, atomic<bool>* enableMap, int totalChannels)  {
 	if(lastChannel < -1 || lastChannel >= totalChannels) {
 		throw runtime_error("Invalid last channel specified: "+to_string(lastChannel));

@@ -80,24 +80,21 @@ Inheritance diagram for ADCs:</div>
  <div class="center">
   <img src="class_a_d_cs.png" usemap="#ADCs_map" alt=""/>
   <map id="ADCs_map" name="ADCs_map">
-<area href="class_l_t_c2448.html" alt="LTC2448" shape="rect" coords="0,56,63,80"/>
+<area href="class_l_t_c2448_1_1_l_t_c2448_i_c.html" title="A class to represent the LTC2448 ADC https://www.analog.com/media/en/technical-documentation/data-she..." alt="LTC2448::LTC2448IC" shape="rect" coords="0,56,132,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95646c17ba87614a0b3f574b449b4ab4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_cs.html#a95646c17ba87614a0b3f574b449b4ab4">takeSample</a> (uint8_t channel)=0</td></tr>
-<tr class="memdesc:a95646c17ba87614a0b3f574b449b4ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the raw reading from an ADC channel.  <a href="class_a_d_cs.html#a95646c17ba87614a0b3f574b449b4ab4">More...</a><br /></td></tr>
-<tr class="separator:a95646c17ba87614a0b3f574b449b4ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3b1b4d80358d4fe4dba3a774c53ca33"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_cs.html#af3b1b4d80358d4fe4dba3a774c53ca33">convToVolts</a> (<a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a> rawReading)=0</td></tr>
-<tr class="memdesc:af3b1b4d80358d4fe4dba3a774c53ca33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a raw reading into tenths of millivolts.  <a href="class_a_d_cs.html#af3b1b4d80358d4fe4dba3a774c53ca33">More...</a><br /></td></tr>
-<tr class="separator:af3b1b4d80358d4fe4dba3a774c53ca33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9061e6acc6d25ff58304f6855fdc7404"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_d_cs.html#a9061e6acc6d25ff58304f6855fdc7404">takeSample</a> (int8_t channel)=0</td></tr>
+<tr class="memdesc:a9061e6acc6d25ff58304f6855fdc7404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the voltage of a channel, or throws an exception if this failed.  <a href="class_a_d_cs.html#a9061e6acc6d25ff58304f6855fdc7404">More...</a><br /></td></tr>
+<tr class="separator:a9061e6acc6d25ff58304f6855fdc7404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract representation of a multi-channel 0-5V ADC. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a95646c17ba87614a0b3f574b449b4ab4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95646c17ba87614a0b3f574b449b4ab4">&#9670;&nbsp;</a></span>takeSample()</h2>
+<a id="a9061e6acc6d25ff58304f6855fdc7404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9061e6acc6d25ff58304f6855fdc7404">&#9670;&nbsp;</a></span>takeSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -106,9 +103,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a> ADCs::takeSample </td>
+          <td class="memname">virtual float ADCs::takeSample </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">int8_t&#160;</td>
           <td class="paramname"><em>channel</em></td><td>)</td>
           <td></td>
         </tr>
@@ -120,53 +117,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the raw reading from an ADC channel. </p>
-<p>Throws an exception if the channel is invalid </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the voltage of a channel, or throws an exception if this failed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">channel</td><td>the channel to read from </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the raw 32 bit response from the ADC (may not even be a true number) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the voltage of the sampled channel </dd></dl>
 
-<p>Implemented in <a class="el" href="class_l_t_c2448.html#a63cb28b04341a31f8d8ba4efc155a7e0">LTC2448</a>.</p>
-
-</div>
-</div>
-<a id="af3b1b4d80358d4fe4dba3a774c53ca33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3b1b4d80358d4fe4dba3a774c53ca33">&#9670;&nbsp;</a></span>convToVolts()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual float ADCs::convToVolts </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_devices_8h.html#a51e63452a8d2670066af8421e92c06c4">RawReading</a>&#160;</td>
-          <td class="paramname"><em>rawReading</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts a raw reading into tenths of millivolts. </p>
-<p>Throw an exception if the raw reading indicates one </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rawReading</td><td>the raw 32 bit response from the ADC </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the tenths of a millivolt represented by the reading </dd></dl>
-
-<p>Implemented in <a class="el" href="class_l_t_c2448.html#aca909486e1dbe1877602f66d683db54b">LTC2448</a>.</p>
+<p>Implemented in <a class="el" href="class_l_t_c2448_1_1_l_t_c2448_i_c.html#a1e2f0fcbdc27af26c71bf7c0351b4796">LTC2448::LTC2448IC</a>.</p>
 
 </div>
 </div>
