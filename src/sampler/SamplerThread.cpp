@@ -36,7 +36,7 @@ int nextChannel(int lastChannel, std::atomic<bool>* enableMap, int totalChannels
 					adcReg.humanReading = calibrated;
 
 					if(mem.logging) {
-						mem.log.log(ADC, VALUE, to_string(calibrated)+','+to_string(volts));
+						mem.log.logNewValue(ADC, chan, calibrated, volts);
 					}
 				}
 				catch (const exception &e) {

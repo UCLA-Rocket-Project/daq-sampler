@@ -14,7 +14,9 @@ public:
 	std::atomic<float> uncalibReading;
 	/** The human readable version of the reading after calibration is applied */
 	std::atomic<float> humanReading;
-	/** The 4-char ID of the device, first char specifies the type of sensor for ADC **/
+	/** The 4-char ID of the device. Must be stored internally in byte order, so
+	 * 	*((uint8_t*)&id) returns the first character
+	 *  **/
 	std::atomic<uint32_t> id;
 	/** The scale to apply for calibration in hundredths */
 	std::atomic<float> scale;
