@@ -66,8 +66,8 @@ float LTC2448IC::takeSample(int8_t channel) {
 }
 
 /* check datasheet for timing constraints
- * OSR=64 with TWOX=0 means each sample should take 1.33ms (rounded to 2 for safety)
+ * OSR=64 with TWOX=0 means each sample should take 1.33ms (rounded to 1.5 for safety)
  */
 void LTC2448IC::waitForSampleComplete() {
-	this_thread::sleep_until(lastSample + milliseconds(2));
+	this_thread::sleep_until(lastSample + microseconds(1500));
 }
