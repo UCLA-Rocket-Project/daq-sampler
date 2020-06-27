@@ -34,6 +34,10 @@ int nextChannel(int lastChannel, std::atomic<bool>* enableMap, int totalChannels
 					mem.adcRegs[chan].uncalibReading = volts;
 					float calibrated = adcReg.scale * volts + adcReg.offset;
 					adcReg.humanReading = calibrated;
+
+					if(mem.logging) {
+						mem.log.log(ADC, VALUE, to_string(calibrated)+','+to_string(volts));
+					}
 				}
 				catch (const exception &e) {
 					spdlog::error("Error trying to sample ADC: {}", e.what());

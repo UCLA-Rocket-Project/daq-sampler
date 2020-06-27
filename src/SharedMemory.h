@@ -1,5 +1,6 @@
 #pragma once
 #include <atomic>
+#include "Logfile.h"
 
 const int NUM_ADCS = 16;
 const int NUM_TCS = 10;
@@ -37,4 +38,6 @@ public:
 	DeviceRegisters adcRegs[NUM_ADCS];
 	/** Registers associated with each TC channel */
 	DeviceRegisters tcRegs[NUM_TCS];
+	/** The shared log file handle */
+	LogFile log;
 };
